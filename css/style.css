@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root {
+    --background: #f4f4f4;
+    --background-secondary: #44ba82;
+    --action: #00824f;
+    --texto-primary: #1d1c1c;
+    --texto-secondary: rgba(255, 255, 255, 0.897);
+}
+
+body {
+    max-width: 80vw;
+    min-height: 100vh;
+    background-color: var(--background);
+
+    margin: 0 auto;
+}
+
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 2rem 2rem;
+    margin: 0.8rem auto;
+
+    background-color: var(--background-secondary);
+    border-radius: 1rem;
+}
+
+.titulo {
+    color: var(--texto-secondary)
+}
+
+.titulo > span {
+    color: #FAC849;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    gap: 0.5rem;
+}
+
+
+.card {
+    background-color: var(--background-secondary);
+
+    border-radius: 1rem;
+    padding: 1.5rem 2rem;
+
+    color: var(--texto-secondary);
+    transition: scale 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    justify-content: center;
+}
+
+.mostrar_fusca {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mostrar_fusca:hover {
+    scale: 1.1;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+input {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: var(--texto-secondary);
+
+    border-bottom: 1px solid white;
+}
+
+input::placeholder {
+    color: var(--texto-secondary);
+}
+
+
+button {
+    margin: 0.8rem 0;
+    width: 35%;
+    padding: 0.5rem 0.8rem;
+
+    background-color: var(--action);
+    color: white;
+
+    border: none;
+    outline: none;
+
+    border-radius: 6px;
+    transition: width 0.2s cubic-bezier(0.445, 0.05, 0.55, 0.95);
+
+}
+
+button:hover {
+   width: 40%;
+   background-color: #00663d;
+}
+
+
+.card_assync_test > button {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.card_assync_test > button:hover {
+    width: 70%;
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+      max-width: 96vw;
+      margin: 0.8rem auto;
+    }
+
+    main {
+        flex-direction: column;   
+    }
+
+    .leftcontainer {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    
+        gap: 0.8rem; 
+    }
+
+    .card_assync_test {
+        grid-column: 1; 
+    }
+}
+
+
+.spanTwoColumn {
+    grid-column: span 2;
+}
+
+.spanTwoRows {
+    grid-row: span 2;
+}

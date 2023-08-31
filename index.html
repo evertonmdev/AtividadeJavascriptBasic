@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Dashboard atividades</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="titulo">Proa atividades | <span>Javascript</span></h1>
+    </header>
+    <main>
+        <div class="card mostrar_fusca" onclick=mostrar_fusca()>
+            <h3>Mostre-me um fusca!</h3>
+        </div>
+
+        <div class="card spanTwoRows">
+            <h3>Pode me informar seu nome?</h3>
+            <form id="nomeform">
+                <input name="nome_cliente" type="text" placeholder="Digite seu nome aqui" />
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+        <div class="card card_assync_test">
+            <h3>Agora uma magica, vou adivinhar seu nome e sua idade</h3>
+            <button onclick=nome_idade()>Vamos lá!</button>
+        </div>
+
+        <div class="card">
+            <h3>Calcular ratangulo</h3>
+            <input id="baseRetangulo" placeholder="Qual base do retangulo" />
+            <input id="alturaRetangulo" placeholder="Qual altura do retangulo" />
+
+            <button onclick=calcular_retangulo()>Calcular</button>
+
+        </div>
+
+        <div class="card">
+            <h3>Calcular quadrado</h3>
+            <input id="ladoQuadrado" placeholder="Qual o tamanho da lateral" />
+            <button onclick=calcular_quadrado()>Calcular</button>
+        </div>
+
+        <div class="card">
+            <h3>Calcular losango</h3>
+            <input id="diagonalMaior" placeholder="Qual o tamanho da diagonal maior?" />
+            <input id="diagonalMenor" placeholder="Qual o tamanho da diagonal menor?" />
+
+            <button onclick=calcular_losango()>Calcular</button>
+        </div>
+
+        <div class="card">
+            <h3>Calcular paralelogramo</h3>
+            <input id="baseParalelogramo" placeholder="Qual tamanho da base maior?" />
+            <input id="alturaParalelogramo" placeholder="Qual o altura do paralelogramo?" />
+
+            <button onclick=calcular_paralelogramo()>Calcular</button>
+        </div>
+
+        <div class="card">
+            <h3>Calcular triangulo</h3>
+            <input id="baseTriangulo" placeholder="Qual tamanho da base?" />
+            <input id="alturaTriangulo" placeholder="Qual o altura do triangulo" />
+
+            <button onclick=calcular_triangulo()>Calcular</button>
+        </div>
+        
+        <div class="card">
+            <h3>Calcular circulo</h3>
+            <input id="raio" placeholder="Qual o raio do circulo?" />
+
+            <button onclick=calcular_circulo()>Calcular</button>
+        </div>
+
+        <div class="card spanTwoColumn">
+            <h3>Calcular Trapezio</h3>
+            <input id="baseMaior" placeholder="Qual tamanho da base maior?" />
+            <input id="baseMenor" placeholder="Qual tamanho da base menor?" />
+            <input id="hipotenusa" placeholder="Qual o tamanho da hipotenusa?" />
+
+            <button onclick=calcular_trapesio()>Calcular</button>
+        </div>
+    </main>
+
+
+    <script src="/js/index.js" type="text/javascript"></script>
+</body>
+
+</html>
